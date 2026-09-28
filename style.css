@@ -6,6 +6,7 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 .condition-key.f{border-color:var(--purple);color:var(--purple)}
 .condition-key.m{border-color:var(--teal);color:var(--deep-teal)}
+.subtitle .m-initial{color:#238153;font-weight:650}
 .unavailable,.button.unavailable:disabled{cursor:default;color:var(--muted);opacity:.55}
 .button.unavailable:hover{border-color:var(--line)}
 @media(max-width:650px){nav a:last-child{display:block}}

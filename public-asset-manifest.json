@@ -2,24 +2,16 @@
   "scope": "Public website only. Paper and raw downloads withheld. Execution video title strips cropped; frame count and timing unchanged. Numerical measurements unchanged.",
   "files": [
     {
-      "path": "index.html",
-      "sha256": "c3d56a6eff057a8f640cf74d1415256c2d188103336a42aa5fe0ec2c1f3bb343"
-    },
-    {
-      "path": "style.css",
-      "sha256": "7c0939a466ad976af7cf98213bef10447f95de38163870eab6a96d6be059827b"
+      "path": ".nojekyll",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "path": "app.js",
       "sha256": "ef31b6ec0d1943ac3f9920e41bac7dce201c0de7c4267ac84564b4616f2d78a9"
     },
     {
-      "path": "data.js",
-      "sha256": "0e7dbd99252e47c669e48c25d6da4f3b5a159dc703446bf78f19a0c741014883"
-    },
-    {
-      "path": ".nojekyll",
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "path": "apple-touch-icon.png",
+      "sha256": "a157cbd9acb61e6e7887f2ff601ab3f02708fe70cf2cc8f25826276bcb8e26b3"
     },
     {
       "path": "assets/images/cat-input.webp",
@@ -106,6 +98,14 @@
       "sha256": "0bf723fb77341229efd1e75408df405de63b3ffc5c3f3ad3bc079d689fceb1ac"
     },
     {
+      "path": "assets/vendor/LUCIDE-LICENSE",
+      "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57"
+    },
+    {
+      "path": "assets/vendor/lucide.min.js",
+      "sha256": "ab85225ecc1daa2033607856f03dd2dabcbc08e2d260a5b97e17c690aa929766"
+    },
+    {
       "path": "assets/videos/cat-input.mp4",
       "sha256": "4b221ae4451a9c39a04b3e9133b135938284372eaea3fbf12578c4e6848f5b01"
     },
@@ -178,12 +178,24 @@
       "sha256": "7f16d6d88e17f5b8c2361ee44682e257e0d511af21fc1b5970165397ef0fcdff"
     },
     {
-      "path": "assets/vendor/LUCIDE-LICENSE",
-      "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57"
+      "path": "data.js",
+      "sha256": "0e7dbd99252e47c669e48c25d6da4f3b5a159dc703446bf78f19a0c741014883"
     },
     {
-      "path": "assets/vendor/lucide.min.js",
-      "sha256": "ab85225ecc1daa2033607856f03dd2dabcbc08e2d260a5b97e17c690aa929766"
+      "path": "favicon.ico",
+      "sha256": "789aa687ab3556cd050d967e0b3644929f7d7b3267cb59abe4b5c887959035e6"
+    },
+    {
+      "path": "favicon.png",
+      "sha256": "4659ca5f84d497e1c2eab14dab909ebb6ceec6aad0634ec77dcca636d9776c08"
+    },
+    {
+      "path": "index.html",
+      "sha256": "c2d6d6db98650a353db411eaa3de2bd930a5ad772273fc36d36395dc2f6da9b5"
+    },
+    {
+      "path": "style.css",
+      "sha256": "ee2fae1f5b992e6be8564d7cb7f6cafe2e42079c69c45f5a6320cb43060817e7"
     }
   ]
 }
