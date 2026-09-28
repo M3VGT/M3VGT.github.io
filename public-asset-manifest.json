@@ -1,5 +1,5 @@
 {
-  "scope": "Public website only. Paper and raw downloads withheld. Execution video title strips cropped; frame count and timing unchanged. Numerical measurements unchanged.",
+  "scope": "Public website only. The root M3VGT paper and raw downloads remain withheld. The GeoTrussRover subpage includes an anonymous review PDF and a web-compressed project video. Numerical measurements are unchanged.",
   "files": [
     {
       "path": ".nojekyll",
@@ -191,11 +191,47 @@
     },
     {
       "path": "index.html",
-      "sha256": "c2d6d6db98650a353db411eaa3de2bd930a5ad772273fc36d36395dc2f6da9b5"
+      "sha256": "71b4d291a4f1fb1758d4e96e1cee2b45cd1bc26325da76080cbccf71d0292526"
     },
     {
       "path": "style.css",
-      "sha256": "ee2fae1f5b992e6be8564d7cb7f6cafe2e42079c69c45f5a6320cb43060817e7"
+      "sha256": "e735f4bcdb7ffef1474338fb485578059ae962ca4a4e1abab6500c779b96a21e"
+    },
+    {
+      "path": "geotrussrover/app.js",
+      "sha256": "4e25aec3688486a1a05ce4665d425599912a9e40fa981f6113c938e10a0c2cf7"
+    },
+    {
+      "path": "geotrussrover/index.html",
+      "sha256": "4207b69be875185b31235d9c672eba7232270bd98cf4758b138af88321b5262d"
+    },
+    {
+      "path": "geotrussrover/style.css",
+      "sha256": "36a09db20dca0de0d9fd278ff33b1826fff7b232856c729a3bf05df8934b7db7"
+    },
+    {
+      "path": "geotrussrover/assets/docs/GeoTrussRover.pdf",
+      "sha256": "0b293a2dc7e851c369cad1aca37458cd1281c9f1030e120e66ff8651a4c3cef1"
+    },
+    {
+      "path": "geotrussrover/assets/images/evidence.webp",
+      "sha256": "14269a9229300a0a38fcd744d8cd795cfba9acf84622cab10af7ffee9c934837"
+    },
+    {
+      "path": "geotrussrover/assets/images/method.webp",
+      "sha256": "9eea90b45210d760211f4220f0c7c732b9f993be94bbc5b45b7135375134123e"
+    },
+    {
+      "path": "geotrussrover/assets/images/primitives.webp",
+      "sha256": "e318d3122a76590efa3ddd9b3df9df67b2c1f6eb1c3791745ff9e31fa92df9ce"
+    },
+    {
+      "path": "geotrussrover/assets/images/video-poster.webp",
+      "sha256": "6df64a21ebf9001fbd3e4666bb4142dccc4dbd3fd87e78faa9b4a656a0079ede"
+    },
+    {
+      "path": "geotrussrover/assets/video/geotrussrover-intro.mp4",
+      "sha256": "620ed4667da11f83fa714d78aefd8c5e099c5b735be2bdbae0ed0406a690af24"
     }
   ]
 }

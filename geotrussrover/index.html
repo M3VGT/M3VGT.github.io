@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="GeoTrussRover uses contact-semantic morphology primitives and constrained whole-body feedback to reuse a solved variable-geometry-truss traversal across step heights.">
+  <meta name="theme-color" content="#071f2d">
+  <link rel="canonical" href="https://m3vgt.github.io/geotrussrover/">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23023852'/%3E%3Cg stroke='%23fff' stroke-width='4' fill='none'%3E%3Cpath d='M13 43 31 13l20 30H13Z'/%3E%3Cpath d='m13 43 38-20M31 13l-2 40'/%3E%3C/g%3E%3Cg fill='%23ff5569'%3E%3Ccircle cx='13' cy='43' r='5'/%3E%3Ccircle cx='31' cy='13' r='5'/%3E%3Ccircle cx='51' cy='43' r='5'/%3E%3C/g%3E%3C/svg%3E">
+  <title>GeoTrussRover | Contact-Semantic Control Primitives</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="../assets/vendor/lucide.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#video">Skip to the project video</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="GeoTrussRover home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>GeoTrussRover</span>
+    </a>
+    <nav aria-label="Project navigation">
+      <a href="#video">Video</a>
+      <a href="#method">Method</a>
+      <a href="#evidence">Evidence</a>
+      <a class="parent-link" href="../">M<sup>3</sup>VGT home</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="project-title">
+      <div class="hero-copy">
+        <p class="kicker">Morphological computation for high-dimensional mobile robots</p>
+        <h1 id="project-title">GeoTrussRover</h1>
+        <p class="hero-subtitle">Contact-semantic control primitives turn one solved traversal into reusable whole-body motion for a 21-member variable-geometry truss.</p>
+        <p class="review-note">ICRA 2027 submission · anonymous review copy</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#video"><i data-lucide="play" aria-hidden="true"></i> Watch the video</a>
+          <a class="button secondary" href="assets/docs/GeoTrussRover.pdf"><i data-lucide="file-text" aria-hidden="true"></i> Read the paper</a>
+        </div>
+      </div>
+
+      <div id="video" class="hero-video">
+        <div class="video-frame">
+          <video controls autoplay muted playsinline preload="metadata" poster="assets/images/video-poster.webp" aria-label="GeoTrussRover project video">
+            <source src="assets/video/geotrussrover-intro.mp4" type="video/mp4">
+            Your browser does not support HTML video. <a href="assets/video/geotrussrover-intro.mp4">Download the project video.</a>
+          </video>
+        </div>
+        <p class="video-caption"><span>Project video</span> Physical traversal, simulation, and morphology adaptation in 97 seconds.</p>
+      </div>
+
+      <div class="hero-metrics" aria-label="Project highlights">
+        <div><strong>21 + 4</strong><span>member rates and wheel speeds</span></div>
+        <div><strong>63.7%</strong><span>fewer endpoint evaluations</span></div>
+        <div><strong>0.46 m</strong><span>simulated step traversal</span></div>
+        <div><strong>0.195 m</strong><span>physical step traversal</span></div>
+      </div>
+    </section>
+
+    <section class="summary section-pad" aria-labelledby="summary-title">
+      <div class="section-index"><span>01</span> THE IDEA</div>
+      <div class="summary-grid">
+        <h2 id="summary-title">Let morphology carry reusable task structure.</h2>
+        <div class="summary-copy">
+          <p>A variable-geometry truss can move its wheels, raise its chassis, and redistribute support by changing the lengths of its load-bearing members. The same flexibility creates a difficult coordination problem: a small set of task objectives must be mapped to 21 coupled actuators.</p>
+          <p>GeoTrussRover solves one source traversal, extracts four contact-semantic coordination primitives, and projects them onto the physically feasible morphology set of a new step height. Whole-body feedback then corrects member and wheel errors without forcing the controller to remain inside the primitive subspace.</p>
+        </div>
+      </div>
+      <div class="idea-cards">
+        <article><span>01</span><h3>Store coordination</h3><p>Consecutive feasible keyframes encode which members lengthen and shorten together during each support phase.</p></article>
+        <article><span>02</span><h3>Adapt only what changes</h3><p>Physical projection preserves the source coordination while correcting height-dependent closure, clearance, support, and stroke constraints.</p></article>
+        <article><span>03</span><h3>Correct in full space</h3><p>A primitive-guided QP treats the adapted path as a soft reference and retains local freedom for every member and wheel.</p></article>
+      </div>
+    </section>
+
+    <section id="method" class="method section-pad" aria-labelledby="method-title">
+      <div class="section-index light"><span>02</span> METHOD</div>
+      <div class="section-heading light">
+        <h2 id="method-title">One source solve.<br>Many related traversals.</h2>
+        <p>The offline path stores contact-conditioned morphology changes. Online feedback executes the transferred path at 50 Hz.</p>
+      </div>
+      <figure class="wide-figure">
+        <button class="zoom-trigger" data-image="assets/images/method.webp" data-caption="GeoTrussRover method: solve a source task, extract phase coordination, project it to a target height, and execute with primitive-guided whole-body feedback." aria-label="Enlarge the method figure">
+          <img src="assets/images/method.webp" width="1568" height="872" loading="lazy" alt="GeoTrussRover pipeline from source traversal through primitive extraction and physical projection to whole-body feedback">
+          <span class="zoom-label"><i data-lucide="maximize-2" aria-hidden="true"></i> Enlarge</span>
+        </button>
+        <figcaption>The source task yields four phase-wise member-change vectors. Projection adjusts their key shapes to the target height, then the controller maps the reference and measured state to 21 member-rate and four wheel-speed commands.</figcaption>
+      </figure>
+    </section>
+
+    <section class="primitives section-pad" aria-labelledby="primitive-title">
+      <div class="section-index"><span>03</span> CONTACT-SEMANTIC PRIMITIVES</div>
+      <div class="primitive-layout">
+        <div class="primitive-copy">
+          <h2 id="primitive-title">A traversal becomes a reusable motion cycle.</h2>
+          <p>The primitive sequence follows the contact semantics of the task rather than elapsed time. Each phase advances only after its target morphology and support condition are reached.</p>
+          <ol class="phase-list">
+            <li><span>P1</span><div><strong>Front-right lift</strong><small>establish the first elevated support</small></div></li>
+            <li><span>P2</span><div><strong>Front-left lift</strong><small>seat the front axle on the upper surface</small></div></li>
+            <li><span>P3</span><div><strong>Chassis elevation</strong><small>clear the edge while preserving support</small></div></li>
+            <li><span>P4</span><div><strong>Wheelbase contraction</strong><small>recover the rear axle and transfer the body</small></div></li>
+          </ol>
+          <p class="phase-note">Across heights, P1 and P2 change comparatively little. P3 and especially P4 move farther on the morphology manifold, identifying the phases where projection or local recomputation matters most.</p>
+        </div>
+        <figure class="portrait-figure">
+          <button class="zoom-trigger" data-image="assets/images/primitives.webp" data-caption="Contact-semantic primitive sequence at a 0.20 m step. Red members extend and blue members contract relative to the preceding state." aria-label="Enlarge the primitive sequence">
+            <img src="assets/images/primitives.webp" width="737" height="800" loading="lazy" alt="Six stages of GeoTrussRover crossing a step with members colored by length change">
+            <span class="zoom-label"><i data-lucide="maximize-2" aria-hidden="true"></i> Enlarge</span>
+          </button>
+          <figcaption>Primitive sequence at a 0.20 m step. Red members extend and blue members contract relative to the preceding state.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="evidence" class="evidence section-pad" aria-labelledby="evidence-title">
+      <div class="section-index"><span>04</span> EVIDENCE</div>
+      <div class="section-heading">
+        <h2 id="evidence-title">Transfer efficiency and traversal range.</h2>
+        <p>The evidence separates feasibility, constrained execution, planning reuse, simulation, and hardware demonstration.</p>
+      </div>
+
+      <div class="result-strip">
+        <article><strong>63.7%</strong><h3>fewer evaluations</h3><p>when adapting a 0.10 m source traversal to a 0.075 m target instead of recomputing all endpoints.</p></article>
+        <article><strong>32.5%</strong><h3>fewer evaluations</h3><p>from 0.20 m to 0.30 m when recomputation is localized to the mismatched rear-recovery phase.</p></article>
+        <article><strong>1.08–4.97×</strong><h3>wheel-radius range</h3><p>covered by contact-phase feasibility analysis from 0.10 m to 0.46 m step height.</p></article>
+      </div>
+
+      <div class="evidence-layout">
+        <figure class="evidence-figure">
+          <button class="zoom-trigger" data-image="assets/images/evidence.webp" data-caption="GeoTrussRover simulation and physical demonstrations. Isaac Sim reaches 0.46 m; the electric prototype traverses 0.195 m." aria-label="Enlarge simulation and hardware evidence">
+            <img src="assets/images/evidence.webp" width="753" height="668" loading="lazy" alt="Simulation sequence on a 0.46 m step and real robot sequence on a 0.195 m step">
+            <span class="zoom-label"><i data-lucide="maximize-2" aria-hidden="true"></i> Enlarge</span>
+          </button>
+          <figcaption>Simulation and physical demonstrations.</figcaption>
+        </figure>
+        <div class="evidence-copy">
+          <div><span>Simulation</span><h3>0.46 m</h3><p>Isaac Sim reaches a step near the theoretical morphology boundary and demonstrates the complete contact-semantic sequence.</p></div>
+          <div><span>Hardware</span><h3>0.195 m</h3><p>The electrically actuated prototype traverses more than twice its wheel radius through coordinated whole-body shape change.</p></div>
+          <div><span>Control</span><h3>Full-space feedback</h3><p>The primitive supplies the nominal coordination, while independent member and wheel commands remain available for local correction.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="paper-band" aria-label="Paper download">
+      <div>
+        <p>GeoTrussRover: Morphological Computation with Contact-Semantic Control Primitives</p>
+        <span>Anonymous ICRA 2027 review copy</span>
+      </div>
+      <a class="button paper-button" href="assets/docs/GeoTrussRover.pdf"><i data-lucide="download" aria-hidden="true"></i> Download PDF</a>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true"></span><span>GeoTrussRover</span></a>
+    <p>One solved traversal, reusable morphology coordination.</p>
+    <a href="../">Return to M<sup>3</sup>VGT</a>
+  </footer>
+
+  <dialog id="figure-dialog" aria-label="Enlarged research figure">
+    <button id="close-dialog" class="dialog-close" aria-label="Close enlarged figure"><i data-lucide="x" aria-hidden="true"></i></button>
+    <img id="dialog-image" alt="">
+    <p id="dialog-caption"></p>
+  </dialog>
+</body>
+</html>

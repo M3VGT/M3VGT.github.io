@@ -9,4 +9,4 @@
 .subtitle .m-initial{color:#238153;font-weight:650}
 .unavailable,.button.unavailable:disabled{cursor:default;color:var(--muted);opacity:.55}
 .button.unavailable:hover{border-color:var(--line)}
-@media(max-width:650px){nav a:last-child{display:block}}
+@media(max-width:650px){nav a:last-child{display:block}nav a[href="#motion"],nav a[href="#results"]{display:none}}

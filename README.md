@@ -4,6 +4,10 @@ Static academic website for **Giving Motion a Body: Synthesizing Robot Mechanism
 
 Website: https://m3vgt.github.io/
 
+The repository also hosts the **GeoTrussRover** project page at
+https://m3vgt.github.io/geotrussrover/. Its self-contained source and media live
+under `geotrussrover/`; the root project page links to it from the main navigation.
+
 ## Deployment
 
 GitHub Pages serves the root of the `main` branch. `.nojekyll` keeps the site static. No install step, build service, API keys, analytics, or external runtime assets are required.
