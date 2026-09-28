@@ -1,5 +1,5 @@
 {
-  "scope": "Public website only. The root M3VGT paper and raw downloads remain withheld. The GeoTrussRover subpage includes an anonymous review PDF and a web-compressed project video. Numerical measurements are unchanged.",
+  "scope": "Public website only. The root M3VGT paper and raw downloads remain withheld. The GeoTrussRover subpage links to the paper on arXiv and includes a web-compressed project video. Numerical measurements are unchanged.",
   "files": [
     {
       "path": ".nojekyll",
@@ -203,15 +203,11 @@
     },
     {
       "path": "geotrussrover/index.html",
-      "sha256": "4b5fbd1e2528c55331e3920b53c6846d81d82cc41873a9b912338614da10dfc7"
+      "sha256": "41402e3cca9efb4c08b689e97d6f9aedf0d071a851e97600c87047cac7be0806"
     },
     {
       "path": "geotrussrover/style.css",
       "sha256": "36a09db20dca0de0d9fd278ff33b1826fff7b232856c729a3bf05df8934b7db7"
-    },
-    {
-      "path": "geotrussrover/assets/docs/GeoTrussRover.pdf",
-      "sha256": "0b293a2dc7e851c369cad1aca37458cd1281c9f1030e120e66ff8651a4c3cef1"
     },
     {
       "path": "geotrussrover/assets/images/evidence.webp",
