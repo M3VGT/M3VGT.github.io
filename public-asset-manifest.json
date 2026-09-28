@@ -1,0 +1,189 @@
+{
+  "scope": "Public website only. Paper and raw downloads withheld. Execution video title strips cropped; frame count and timing unchanged. Numerical measurements unchanged.",
+  "files": [
+    {
+      "path": "index.html",
+      "sha256": "c3d56a6eff057a8f640cf74d1415256c2d188103336a42aa5fe0ec2c1f3bb343"
+    },
+    {
+      "path": "style.css",
+      "sha256": "7c0939a466ad976af7cf98213bef10447f95de38163870eab6a96d6be059827b"
+    },
+    {
+      "path": "app.js",
+      "sha256": "ef31b6ec0d1943ac3f9920e41bac7dce201c0de7c4267ac84564b4616f2d78a9"
+    },
+    {
+      "path": "data.js",
+      "sha256": "0e7dbd99252e47c669e48c25d6da4f3b5a159dc703446bf78f19a0c741014883"
+    },
+    {
+      "path": ".nojekyll",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "assets/images/cat-input.webp",
+      "sha256": "8a1893677803ff56fd68397a121f9b03125d633dd369e65f4e56754fab02a6b6"
+    },
+    {
+      "path": "assets/images/cat-render.webp",
+      "sha256": "dc408b250342642155f324bac6536411b05031fd42010d731b6602c85d64a75e"
+    },
+    {
+      "path": "assets/images/cat_seed0-F-clean.webp",
+      "sha256": "4cf880cc730dd0f7b44541732faf88ee3631c28861f39baac4f50f56799d0665"
+    },
+    {
+      "path": "assets/images/cat_seed0-M-clean.webp",
+      "sha256": "ca3cdf8c744408e632986c74066ea59affde079b411b2fdae90c19231d66b4dd"
+    },
+    {
+      "path": "assets/images/cat_seed0-S-clean.webp",
+      "sha256": "805a2c36db8b2fcc288b02a190a008c0bccf983a32715f84a4b484c032d98da3"
+    },
+    {
+      "path": "assets/images/cat_seed1-F-clean.webp",
+      "sha256": "de4806850d639f2be2a4eb2341e6ae9ff9f16bd337ab700e628f6149f0ebdd3a"
+    },
+    {
+      "path": "assets/images/cat_seed1-M-clean.webp",
+      "sha256": "4cd21914ded4b0dd60a593797a3f10b63bf71e513a621009cd96800833fd1a7f"
+    },
+    {
+      "path": "assets/images/cat_seed1-S-clean.webp",
+      "sha256": "5599b02265a386e617d8cb3b1a00911f1647e875fdcd2bdcebfa41ac81a89d46"
+    },
+    {
+      "path": "assets/images/cat_seed2-F-clean.webp",
+      "sha256": "9f661bd014e4cd9c84c13600cddcfd6a187875770c6bb17b502f0d83b7c02a65"
+    },
+    {
+      "path": "assets/images/cat_seed2-M-clean.webp",
+      "sha256": "6aaa17b33a339241e5a734459999bd98d91477e0b75fd422f0b1037d4d921f68"
+    },
+    {
+      "path": "assets/images/cat_seed2-S-clean.webp",
+      "sha256": "fda277aae60109a74af23a8f50f6fe49a97672ed367b361581394b0864f61508"
+    },
+    {
+      "path": "assets/images/cross_input_projection.webp",
+      "sha256": "7662eff6ba38bf379a7d1cbae25230b07852dc60cf0a73c4187a64aabee30e2f"
+    },
+    {
+      "path": "assets/images/dog-input.webp",
+      "sha256": "e92bd4f837ba177e206e0b323a9c8487696496d01c14e602ce705d2808e45d85"
+    },
+    {
+      "path": "assets/images/dog_seed0-F-clean.webp",
+      "sha256": "2e1e230d214625883df4151871d9cb6d735768c460528d99e95cc781cdcdc40e"
+    },
+    {
+      "path": "assets/images/dog_seed0-M-clean.webp",
+      "sha256": "7b9201131c7cc755fee9bf8586fe31b0533525d466e757ca0146c0cb1fcf9390"
+    },
+    {
+      "path": "assets/images/dog_seed0-S-clean.webp",
+      "sha256": "4a7c565bd631481dd00347f0700be861d815cae4e5d7e3cd10eaf040a181cdcc"
+    },
+    {
+      "path": "assets/images/horse-input.webp",
+      "sha256": "1233007201c001549c1a983ecec3313a28d2dbd4d742b78579c9849e91dec7c1"
+    },
+    {
+      "path": "assets/images/horse_seed0-F-clean.webp",
+      "sha256": "abfac58c98f6347605b020e93ba9c720027fdd3a46ff49da2fc140c88e571e99"
+    },
+    {
+      "path": "assets/images/horse_seed0-M-clean.webp",
+      "sha256": "fe535e95f52ef6fa59cf681447854541fd059386deffa34d5d4e7faf7e519ba4"
+    },
+    {
+      "path": "assets/images/horse_seed0-S-clean.webp",
+      "sha256": "c50494af935bf34f69ee99114385748815fe6393211a7799fa325f58aca412d6"
+    },
+    {
+      "path": "assets/images/method.webp",
+      "sha256": "0bf723fb77341229efd1e75408df405de63b3ffc5c3f3ad3bc079d689fceb1ac"
+    },
+    {
+      "path": "assets/videos/cat-input.mp4",
+      "sha256": "4b221ae4451a9c39a04b3e9133b135938284372eaea3fbf12578c4e6848f5b01"
+    },
+    {
+      "path": "assets/videos/cat_seed0-F-clean.mp4",
+      "sha256": "4673f5ee3d9431d338cf63abfb442cf535aab97076090f6c9bc5cbb9bce036ed"
+    },
+    {
+      "path": "assets/videos/cat_seed0-M-clean.mp4",
+      "sha256": "d4ab2329318b26d9c0b83e1dfe124b896a4b74d6b94475c2f10c7a26bdc350d3"
+    },
+    {
+      "path": "assets/videos/cat_seed0-S-clean.mp4",
+      "sha256": "d83d5cd2028238b95ee68208b03a586b80c5de310e3b41e6dff09133f177b9c0"
+    },
+    {
+      "path": "assets/videos/cat_seed1-F-clean.mp4",
+      "sha256": "dfe21a792d1dc82c2ab7d23430ad73d6e6cd0517b9885a16746b9d4076cdb3f0"
+    },
+    {
+      "path": "assets/videos/cat_seed1-M-clean.mp4",
+      "sha256": "af90f45e86d25358062eb38363e2cbc4b64ba8eed60f68a0f29e8783d1872e0f"
+    },
+    {
+      "path": "assets/videos/cat_seed1-S-clean.mp4",
+      "sha256": "422268497c4d73faa98621d0965f7e92313988b44ec46d7a0146845b3fd15428"
+    },
+    {
+      "path": "assets/videos/cat_seed2-F-clean.mp4",
+      "sha256": "aeac36692f2fc60f823c639009597d8b0799c40d4f7af2baeef7428348169e28"
+    },
+    {
+      "path": "assets/videos/cat_seed2-M-clean.mp4",
+      "sha256": "bb2836c1a855b691dbfbaa5e47a550b22700b40684051ec6fa0e2bf59c291eca"
+    },
+    {
+      "path": "assets/videos/cat_seed2-S-clean.mp4",
+      "sha256": "92cc665445735e39051b8eb953fa453c799e2d51aaf0d15897ba63fd5b47bfa2"
+    },
+    {
+      "path": "assets/videos/dog-input.mp4",
+      "sha256": "1ff75c4a48243f2387c5d56a5909704be8650f7cc0b0d24180b8b74affbf98ee"
+    },
+    {
+      "path": "assets/videos/dog_seed0-F-clean.mp4",
+      "sha256": "8acc7bd8bd1955cdedde7652e5ea7ab5560c491419101dddfe05526270dab7a1"
+    },
+    {
+      "path": "assets/videos/dog_seed0-M-clean.mp4",
+      "sha256": "ef6d498ffad87a4c2055c9577d0148ce99eadff493890c63e7b6742662c31d87"
+    },
+    {
+      "path": "assets/videos/dog_seed0-S-clean.mp4",
+      "sha256": "f4fde75a8af7289a69502a0dc10d4120361a7fe52adc3890622aae197fdaa929"
+    },
+    {
+      "path": "assets/videos/horse-input.mp4",
+      "sha256": "19fb3037ea653aa3a5b37da9a34737c8b238d3deba53c3fd7aa65a80f65d1588"
+    },
+    {
+      "path": "assets/videos/horse_seed0-F-clean.mp4",
+      "sha256": "399cab99f228e4fb0f86d67f786f827191fa6878c48fd6f9ed2a1424674841c4"
+    },
+    {
+      "path": "assets/videos/horse_seed0-M-clean.mp4",
+      "sha256": "795e7b309d2e00415f70f09132f6770418a57d64252e0cef1d905fed79ebeff7"
+    },
+    {
+      "path": "assets/videos/horse_seed0-S-clean.mp4",
+      "sha256": "7f16d6d88e17f5b8c2361ee44682e257e0d511af21fc1b5970165397ef0fcdff"
+    },
+    {
+      "path": "assets/vendor/LUCIDE-LICENSE",
+      "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57"
+    },
+    {
+      "path": "assets/vendor/lucide.min.js",
+      "sha256": "ab85225ecc1daa2033607856f03dd2dabcbc08e2d260a5b97e17c690aa929766"
+    }
+  ]
+}

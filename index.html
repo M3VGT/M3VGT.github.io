@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="M3VGT: mesh-constrained mechanism design informed by observed motion. Explore the method, simulation videos, and paired S/F/M experiments.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://m3vgt.github.io/">
+  <title>Giving Motion a Body | M³VGT</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%23248c91'/%3E%3Ctext x='7' y='29' font-family='Georgia' font-size='28' fill='white'%3EM%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="assets/vendor/lucide.min.js"></script>
+  <script defer src="data.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#overview">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="M3VGT home">M<sup>3</sup><span>VGT</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#method">Method</a><a href="#motion">Motion</a><a href="#results">Results</a>
+    </nav>
+    <span class="paper-link unavailable" aria-disabled="true">Paper</span>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="paper-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Mesh × Motion × Mechanism</p>
+        <h1 id="paper-title">Giving Motion a Body</h1>
+        <p class="subtitle">Synthesizing Robot Mechanisms<br class="mobile-only"> from Mesh and Motion</p>
+        <p class="author-line">Anonymous authors, working manuscript, 2026</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#motion"><i data-lucide="play" aria-hidden="true"></i> See the motion</a>
+          <button class="button quiet unavailable" type="button" disabled><i data-lucide="file-text" aria-hidden="true"></i> Paper</button>
+        </div>
+      </div>
+      <img class="hero-art" src="assets/images/cat-render.webp" alt="Cat-shaped variable-geometry truss with white telescopic struts and blue nodes" fetchpriority="high">
+      <a class="hero-down" href="#overview" aria-label="Read the overview" title="Read the overview"><i data-lucide="arrow-down" aria-hidden="true"></i></a>
+    </section>
+
+    <section id="overview" class="overview section-pad">
+      <div class="section-label"><span>01</span> THE IDEA</div>
+      <div class="overview-grid">
+        <h2>Shape constrains the body.<br><span class="teal">Motion guides its design.</span></h2>
+        <div class="prose"><p>A mesh describes what an animal looks like. A video describes how it moves. Neither, on its own, tells us how to build a mechanism that can express that motion.</p><p><strong>M<sup>3</sup>VGT</strong> connects these two descriptions. It constructs a body from extensible struts, maps semantic motion to its nodes, and uses trajectory compatibility to select a layout and allocate actuator travel.</p></div>
+      </div>
+      <div class="facts" aria-label="Scope of the paired experiments">
+        <div><strong>3</strong><span>animal inputs <br>cat, horse, dog</span></div>
+        <div><strong>32 / 90</strong><span>nodes / struts<br>fixed across paired designs</span></div>
+        <div><strong>15</strong><span>recorded executions<br>five S/F/M candidate pools</span></div>
+      </div>
+    </section>
+
+    <section id="motion" class="motion-band section-pad">
+      <div class="section-label"><span>02</span> MOTION EXPRESSION</div>
+      <div class="section-heading"><h2>From an observed action<br>to a moving mechanism.</h2><p>Original video and recorded MuJoCo execution.<br>Full source duration; no time warping.</p></div>
+      <div class="demo-toolbar">
+        <div class="tabs" role="tablist" aria-label="Animal input">
+          <button role="tab" aria-selected="true" aria-controls="demo-panel" id="cat-tab" data-animal="cat">Cat</button>
+          <button role="tab" aria-selected="false" aria-controls="demo-panel" id="horse-tab" data-animal="horse" tabindex="-1">Horse</button>
+          <button role="tab" aria-selected="false" aria-controls="demo-panel" id="dog-tab" data-animal="dog" tabindex="-1">Dog</button>
+        </div>
+        <label class="seed-select" id="seed-control">Candidate pool <select id="seed" aria-label="Cat candidate pool"><option value="0">Seed 0</option><option value="1">Seed 1</option><option value="2">Seed 2</option></select></label>
+        <div class="condition-controls" role="group" aria-label="Design condition">
+          <button data-condition="S" aria-pressed="false" title="S: shape-only layout, fixed strokes">S</button>
+          <button data-condition="F" aria-pressed="false" title="F: same S body, adapted strokes">F</button>
+          <button data-condition="M" aria-pressed="true" title="M: motion-informed layout and adapted strokes">M</button>
+        </div>
+      </div>
+      <div id="demo-panel" role="tabpanel" aria-labelledby="cat-tab">
+        <div class="video-grid">
+          <figure><div class="video-stage"><video id="input-video" aria-label="Observed animal motion" controls muted playsinline preload="metadata" poster="assets/images/cat-input.webp" src="assets/videos/cat-input.mp4"></video></div><figcaption id="input-caption">Cat, 9.00 s motion target</figcaption></figure>
+          <figure><div class="video-stage"><video id="robot-video" aria-label="Recorded MuJoCo execution" controls muted playsinline preload="metadata" poster="assets/images/cat_seed0-M-clean.webp" src="assets/videos/cat_seed0-M-clean.mp4"></video></div></figure>
+        </div>
+        <div class="playback-bar"><button class="button primary" id="play-together"><i data-lucide="play" aria-hidden="true"></i><span>Play together</span></button><button class="icon-button" id="restart" title="Restart both videos" aria-label="Restart both videos"><i data-lucide="rotate-ccw" aria-hidden="true"></i></button><p id="design-description">Motion-informed layout selection with adapted actuator strokes.</p></div>
+        <p id="media-status" role="status" class="media-status"></p>
+        <div class="demo-metrics" aria-live="polite"><div><span>Shape F1</span><strong id="metric-shape">63.34<span>%</span></strong></div><div><span>Projection / target RMSE</span><strong id="metric-projection">34.39 <span>mm</span></strong></div><div><span>Execution / target RMSE</span><strong id="metric-execution">183.01 <span>mm</span></strong></div></div>
+      </div>
+    </section>
+
+    <section id="method" class="section-pad method-section">
+      <div class="section-label"><span>03</span> THE METHOD</div>
+      <div class="section-heading"><h2>One representation.<br>Three connected stages.</h2><p>Named body parts connect visual observations,<br>mechanical design, and bounded strut control.</p></div>
+      <div class="method-steps">
+        <article><span class="step-number">A</span><h3>Observe & register</h3><p>Track image points, review semantic identities, and infer mesh-guided spatial trajectories with bone, temporal, and contact priors.</p><p class="formula">Video + mesh → O ∈ ℝ<sup>T × K × 3</sup></p></article>
+        <article><span class="step-number">B</span><h3>Construct & adapt</h3><p>Sample the surface, interior, and skeleton. Build load paths, bind semantic roles, then select a compatible layout and allocate per-strut travel.</p><p class="formula">Mesh + O → G = (V, E), [ℓ<sub>min</sub>, ℓ<sub>max</sub>]</p></article>
+        <article><span class="step-number">C</span><h3>Project & execute</h3><p>Project node targets into actuator limits. Length PD and task-space feedback produce bounded commands; record the actual trajectories.</p><p class="formula">Target T → projection P → execution X</p></article>
+      </div>
+      <figure class="method-figure"><button class="figure-zoom" data-zoom="assets/images/method.webp" data-caption="Method overview: video and mesh branches meet through semantic motion and mechanism adaptation." aria-label="Enlarge the method figure"><img src="assets/images/method.webp" width="1269" height="1042" loading="lazy" alt="Method diagram: masked bidirectional point tracking and mesh semantic anchors feed mechanism generation, adaptation and MuJoCo execution"><span class="zoom-badge"><i data-lucide="maximize-2" aria-hidden="true"></i></span></button><figcaption>Video and geometry meet at semantic anchors. Cat observations use SuperAnimal with manual correction; the illustrated CoTracker workflow applies to the other curated inputs.</figcaption></figure>
+      <details class="technical-note"><summary>What makes a body mechanically usable?</summary><div><p>Connectedness and rigidity rank are only initial checks. The pipeline also audits load-bearing deformation, semantic load paths, actuator travel, mesh corridors, assembly clearance, and simulated execution. A full-rank graph can still be compliant under its own weight.</p><p>The paired results below isolate layout selection and stroke adaptation at a fixed 32-node / 90-strut budget.</p></div></details>
+    </section>
+
+    <section id="results" class="results-section section-pad">
+      <div class="section-label"><span>04</span> PAIRED EXPERIMENTS</div>
+      <div class="section-heading"><h2>Does motion change<br>which body we should build?</h2><p>Same input. Same component budget.<br>Same controller. Three design conditions.</p></div>
+      <div class="condition-definitions"><article><span class="condition-key s">S</span><h3>Shape only</h3><p>Static shape selects the body.<br>Common fixed-stroke rule.</p></article><article><span class="condition-key f">F</span><h3>Fixed-body adaptation</h3><p>Keep S geometry and connectivity.<br>Adapt only actuator strokes.</p></article><article><span class="condition-key m">M</span><h3>Motion-informed design</h3><p>Select a layout using motion.<br>Same stroke adaptation as F.</p></article></div>
+      <div class="result-layout"><figure><button class="figure-zoom" data-zoom="assets/images/cross_input_projection.webp" data-caption="Cross-input projection error, normalized by frozen torso length." aria-label="Enlarge the projection error figure"><img src="assets/images/cross_input_projection.webp" width="1650" height="1200" loading="lazy" alt="Measured normalized projection error for S, F and M on cat, horse and dog"><span class="zoom-badge"><i data-lucide="maximize-2" aria-hidden="true"></i></span></button><figcaption>Projection error normalized by the frozen input torso length. Seed 0 for each input.</figcaption></figure><div class="findings"><h3>Travel adaptation consistently reduces projection distortion.</h3><p>With the body fixed, F improves on S across all three inputs and all three cat pools.</p><h3>Additional layout gains depend on the candidate pool.</h3><p>Horse execution / target RMSE improves from <strong>86.84 to 83.20 mm</strong>. The dog's sole eligible body makes F and M identical. Cat results vary across pools.</p></div></div>
+      <div class="table-heading"><h3>All recorded conditions</h3><label>Pool <select id="results-pool" aria-label="Results candidate pool"><option value="cat_seed0">Cat, seed 0</option><option value="cat_seed1">Cat, seed 1</option><option value="cat_seed2">Cat, seed 2</option><option value="horse_seed0">Horse, seed 0</option><option value="dog_seed0">Dog, seed 0</option></select></label></div>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Paired experiment results"><table><thead><tr><th>Design</th><th>Shape F1 ↑</th><th>Projection / target ↓<small>RMSE (mm)</small></th><th>Execution / target ↓<small>RMSE (mm)</small></th><th>Execution / source ↓<small>RMSE (mm)</small></th></tr></thead><tbody id="result-rows"></tbody></table></div>
+      <p class="table-note">Source O is the inferred animal motion; target T is retargeted to the mechanism; P is its actuator-limit projection; X is the actual execution. No per-frame realignment. Lower errors are better.</p>
+      <details class="technical-note"><summary>Experiment scope</summary><div><ul><li>Five pools, 40 layout attempts, 15 complete executions. Failed candidates remain in the ledger.</li><li>Three cat seeds produce only two distinct initial graphs, not three independent videos.</li><li>Motion selects within a fixed-topology layout pool. These results do not establish a benefit from topology redesign.</li><li>Command limiting is frequent (approximately 92.8–99.5%); zero force saturation does not mean unconstrained tracking.</li></ul></div></details>
+    </section>
+  </main>
+  <footer><a class="wordmark" href="#top">M<sup>3</sup><span>VGT</span></a><p>Mesh. Motion. Mechanism.</p><p class="credits">Project-page structure inspired by <a href="https://nerfies.github.io/" target="_blank" rel="noopener">Nerfies</a> and the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener">Academic Project Page Template</a>.</p></footer>
+  <dialog id="figure-dialog" aria-label="Enlarged research figure"><button id="close-figure" class="icon-button" aria-label="Close enlarged figure" title="Close"><i data-lucide="x" aria-hidden="true"></i></button><img id="enlarged-figure" alt=""><p id="figure-caption"></p></dialog>
+  <noscript><p class="noscript">The cat videos and method overview are available without JavaScript. Enable JavaScript to switch animal inputs and design conditions.</p></noscript>
+</body>
+</html>
